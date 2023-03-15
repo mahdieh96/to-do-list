@@ -1,0 +1,162 @@
+:root {
+  --color-task1: #b3ccff;
+  --color-task2: #d9b3ff;
+  --color-task3: #ffb3ff;
+  --color-task4: #ffc299;
+  --color-primary: #6600cc;
+  --color-secondary: #adad85;
+  --color-white: #fff;
+  --color-black: #000;
+  --border-radius: 50px;
+}
+html {
+  font-size: 62.5%;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* typography */
+body {
+  padding: 2rem;
+  position: relative;
+  font-size: 2rem;
+}
+
+@media screen and (min-width: 992px) {
+  body {
+    font-size: 4rem;
+  }
+}
+
+/*  input*/
+
+.input {
+  height: 45px;
+  outline: 0;
+  border-radius: var(--border-radius);
+  border: 0;
+  padding: 0.5rem 1rem;
+  width: 0;
+  flex-grow: 1;
+}
+
+.input--container {
+  border: 1px solid var(--color-secondary);
+  padding: 0.5rem;
+  border-radius: var(--border-radius);
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 5rem auto;
+}
+
+/* icon */
+.icon {
+  border-radius: 100%;
+  padding: 0.5rem;
+}
+.icon--add {
+  width: 45px;
+  height: 45px;
+  background-color: var(--color-primary);
+  border: 1px solid var(--color-secondary);
+}
+.icon--delete {
+  width: 35px;
+  height: 35px;
+
+  border: 1px solid var(--color-secondary);
+}
+/* task */
+.task {
+  background: linear-gradient(to right, var(--color-white), var(--color-task1));
+  border-left: 2px solid var(--color-task1);
+  border-radius: 10px;
+  width: 80%;
+  margin: 1rem auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  height: 60px;
+}
+.task:last-child {
+  margin-bottom: 5rem;
+}
+.task span {
+  white-space: nowrap;
+}
+.task__state {
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #6600cc;
+  border: 1px solid var(--color-secondary);
+  border-radius: var(--border-radius);
+}
+/* button */
+.btn {
+  outline: 0;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-radius: 5px;
+  border: 0;
+}
+.btn--ok {
+  padding: 1rem;
+  background-color: var(--color-primary);
+}
+
+.btn--block {
+  display: block;
+  width: 60%;
+  margin: auto;
+}
+
+.btn--clear {
+  position: absolute;
+  bottom: 0;
+  left: 30%;
+  width: 40%;
+  padding: 1rem;
+  background-color: var(--color-primary);
+}
+/*  edit*/
+h2 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 3rem;
+}
+.input--edit {
+  outline: 0;
+  border-radius: 5px;
+  border: 1px solid var(--color-primary);
+  padding: 0.5rem 1rem;
+  width: 60%;
+  display: block;
+  margin: 1rem auto;
+}
+.edit--box {
+  padding: 2rem;
+  margin: auto;
+  width: 80%;
+  display: none;
+  left: 10%;
+  top: 0;
+  position: absolute;
+  border-radius: 5px;
+  border: 1px solid var(--color-secondary);
+
+  background-color: var(--color-white);
+}
+/*  */
+.done {
+  text-decoration: line-through;
+}
